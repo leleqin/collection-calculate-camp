@@ -28,7 +28,7 @@ describe('get_letter_interval', function () {
     expect(result).toEqual(collection_b);
   });
 
-  iit('给定两个相同的数字得到只含此数字对应字母的数组', function() {
+  it('给定两个相同的数字得到只含此数字对应字母的数组', function() {
 
     var result = get_letter_interval(28, 28);
     expect(result).toEqual(['ab']);
