@@ -7,7 +7,7 @@ var number_map_to_word_over_26 = function(collection){
   //     m.push(n[Math.floor(collection[i] / 26) - 1].concat(n[26]));
   //   } else {
   //     m.push(n[Math.floor(collection[i] / 26)].concat(n[collection[i] % 26]));
-  // }
+  // }}
   collection.map(item =>
     item % 26 === 0 ? m.push(n[Math.floor(item / 26) - 1].concat(n[26]))
       : m.push(n[Math.floor(item / 26)].concat(n[item % 26])));
