@@ -10,7 +10,9 @@ function double_to_one(collection) {
   n.push(l[0]);
   n.push(l[1]);
   return n;*/
-  return [].concat.apply([],collection);
+
+   return [].concat.apply([],collection);
+
   //在这里写入代码
 }
 
