@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    var collection = [20,21,22,23,24,25,26,27,28,29,
+      30,31,32,33,34,35,36,37,38,39,
+      40,41,42,43,44,45,46,47,48,49,
+      50,51,52,53];
+    let n = ["", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let r = collection.sort();
+    console.log(r);
+    if (r.length % 2 == 0){
+      let m = Math.ceil((r[r.length/2]+r[r.length/2-1])/2);
+      console.log(m);
+      console.log(n[Math.floor(m / 26)].concat(n[m % 26]));
+
+    }
+    else{
+      let m = r[Math.ceil(r.length/2)];
+      console.log(n[Math.floor(m / 26) - 1].concat(n[26]));
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
