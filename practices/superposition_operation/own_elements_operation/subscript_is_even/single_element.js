@@ -1,31 +1,30 @@
 'use strict';
 var single_element = function(collection){
-  let result = [];
-  let isExist = true;
 
-<<<<<<< HEAD
-  collection.unshift("");
-  let n = [];
-  for (let i = 0;i < collection.length;i++){
-    n.push(collection[i % 2 === 0]);
+  let resultArray = [];
+  let result_a = [];
+  let num = 0;
+
+  var result = 0;
+  for (var i = 0; i < collection.length; i++) {
+    if ((i + 1) % 2 === 0) {
+      result++;
+      resultArray.push(collection[i]);
+    }
   }
+  let resultArray_a = Array.from(new Set(resultArray));
+  for (var index in resultArray_a) {
 
-  return n.filter(element => m(n,element));
-
-
-}
-=======
-  for (let outerIndex = 1; outerIndex < collection.length; outerIndex += 2) {
-    for (let innerIndex = 1; innerIndex < collection.length; innerIndex += 2) {
-      if (collection[outerIndex] === collection[innerIndex] && outerIndex !== innerIndex) {
-        isExist = false;
+    for (var i in resultArray) {
+      if (resultArray_a[index] === resultArray[i]) {
+        num++;
       }
     }
-    if (isExist) result.push(collection[outerIndex]);
-    isExist = true;
+    if (num === 1) {
+      result_a.push(resultArray_a[index]);
+    }
+    num = 0;
   }
-
-  return result;
-};
->>>>>>> 4c6d4003b807bf0237a58b6bf2076035238fda2f
+  return result_a
+}
 module.exports = single_element;
